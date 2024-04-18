@@ -1,0 +1,209 @@
+{
+  "schema": 1,
+  "applicationInfo": {
+    "description": "Web App for Omny users",
+    "name": "Omny Webapp",
+    "securityCategory": "CCCS Medium",
+    "useIaaS": false,
+    "usePaaS": false,
+    "useSaaS": true,
+    "useData": true,
+    "useStorage": true,
+    "useApplication": true,
+    "useCompute": true,
+    "useNetwork": true
+  },
+  "architecture": {
+    "description": ""
+  },
+  "dataflow": {
+    "description": ""
+  },
+  "assumptions": [],
+  "mitigations": [
+    {
+      "id": "5d78e0ce-2947-48be-88a0-031b0ad94378",
+      "numericId": 4,
+      "content": "Anomoly based detection is present",
+      "displayOrder": 4
+    },
+    {
+      "id": "80a3a986-b709-4013-9c98-9dea6d1fcd4c",
+      "numericId": 3,
+      "content": "Access control logs are generated and stored ",
+      "displayOrder": 3
+    },
+    {
+      "id": "f00234df-92fa-4b0e-98cc-d90ca35cdb0c",
+      "numericId": 2,
+      "content": "All APIs have Authorization",
+      "displayOrder": 2
+    },
+    {
+      "id": "58b8c0fa-f86e-4d9b-9f5d-bc363f4ef245",
+      "numericId": 1,
+      "content": "All APIs have strong Authentication",
+      "displayOrder": 1
+    },
+    {
+      "id": "b2f180f0-b264-442e-a8b1-be86ce048dff",
+      "numericId": 5,
+      "content": "Input validation is present",
+      "displayOrder": 5
+    }
+  ],
+  "controls": [],
+  "assumptionLinks": [],
+  "mitigationLinks": [
+    {
+      "linkedId": "9db512aa-c036-4505-aed2-d0b854fdb579",
+      "mitigationId": "80a3a986-b709-4013-9c98-9dea6d1fcd4c"
+    },
+    {
+      "linkedId": "9db512aa-c036-4505-aed2-d0b854fdb579",
+      "mitigationId": "5d78e0ce-2947-48be-88a0-031b0ad94378"
+    },
+    {
+      "linkedId": "a8b47773-cf15-401e-9be8-78c10d19545c",
+      "mitigationId": "f00234df-92fa-4b0e-98cc-d90ca35cdb0c"
+    }
+  ],
+  "controlLinks": [],
+  "threats": [
+    {
+      "id": "a8b47773-cf15-401e-9be8-78c10d19545c",
+      "numericId": 2,
+      "statement": "An external threat actor who is authorized to make API requests can access sensitive data, which leads to the ability to modify data, negatively impacting Omny users",
+      "threatSource": "external threat actor",
+      "prerequisites": "who is authorized to make API requests",
+      "displayedStatement": [
+        "An ",
+        {
+          "type": "span",
+          "content": "external threat actor",
+          "tooltip": "threat source"
+        },
+        " ",
+        {
+          "type": "span",
+          "content": "who is authorized to make API requests",
+          "tooltip": "prerequisites"
+        },
+        " can ",
+        {
+          "type": "b",
+          "content": "access sensitive data",
+          "tooltip": "threat action"
+        },
+        ", which leads to ",
+        {
+          "type": "span",
+          "content": "the ability to modify data",
+          "tooltip": "threat impact"
+        },
+        ", negatively impacting ",
+        {
+          "type": "span",
+          "content": "Omny users",
+          "tooltip": "impacted assets"
+        }
+      ],
+      "threatAction": "access sensitive data",
+      "threatImpact": "the ability to modify data",
+      "impactedAssets": [
+        "Omny users"
+      ],
+      "displayOrder": 2
+    },
+    {
+      "id": "c7ba5900-57b1-43a0-ad5b-647bee361cb2",
+      "numericId": 1,
+      "statement": "An external threat actor who knows credit card info can get access to trip history, which leads to Unauthorized data access, negatively impacting Omny users",
+      "threatSource": "external threat actor",
+      "prerequisites": "who knows credit card info",
+      "displayedStatement": [
+        "An ",
+        {
+          "type": "span",
+          "content": "external threat actor",
+          "tooltip": "threat source"
+        },
+        " ",
+        {
+          "type": "span",
+          "content": "who knows credit card info",
+          "tooltip": "prerequisites"
+        },
+        " can ",
+        {
+          "type": "b",
+          "content": "get access to trip history",
+          "tooltip": "threat action"
+        },
+        ", which leads to ",
+        {
+          "type": "span",
+          "content": "Unauthorized data access",
+          "tooltip": "threat impact"
+        },
+        ", negatively impacting ",
+        {
+          "type": "span",
+          "content": "Omny users",
+          "tooltip": "impacted assets"
+        }
+      ],
+      "threatAction": "get access to trip history",
+      "threatImpact": "Unauthorized data access",
+      "impactedAssets": [
+        "Omny users"
+      ],
+      "displayOrder": 1
+    },
+    {
+      "id": "9db512aa-c036-4505-aed2-d0b854fdb579",
+      "numericId": 3,
+      "statement": "An internal actor who is authenticated and authorized can access sensitive data, which leads to viewing sensitive customer data, negatively impacting Omny users",
+      "threatSource": "internal actor",
+      "prerequisites": "who is authenticated and authorized",
+      "displayedStatement": [
+        "An ",
+        {
+          "type": "span",
+          "content": "internal actor",
+          "tooltip": "threat source"
+        },
+        " ",
+        {
+          "type": "span",
+          "content": "who is authenticated and authorized",
+          "tooltip": "prerequisites"
+        },
+        " can ",
+        {
+          "type": "b",
+          "content": "access sensitive data",
+          "tooltip": "threat action"
+        },
+        ", which leads to ",
+        {
+          "type": "span",
+          "content": "viewing sensitive customer data",
+          "tooltip": "threat impact"
+        },
+        ", negatively impacting ",
+        {
+          "type": "span",
+          "content": "Omny users",
+          "tooltip": "impacted assets"
+        }
+      ],
+      "threatAction": "access sensitive data",
+      "threatImpact": "viewing sensitive customer data",
+      "impactedAssets": [
+        "Omny users"
+      ],
+      "displayOrder": 3
+    }
+  ]
+}
